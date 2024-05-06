@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--manrope-font);
 }
 
 :root {
@@ -39,7 +40,10 @@ body {
     place-items: center;
 
 }
-.sombra{ box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.39);}
+
+.sombra {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.39);
+}
 
 
 .tarjeta {
@@ -48,37 +52,153 @@ body {
     background-color: white;
     border-radius: 14px;
     /* BUSCAR EN W3SCHOOLS propiedades de BORDER RADIUS */
-    
-    
     overflow: hidden;
-    
-    & .encabezado{
+
+    & .encabezado {
         background-color: red;
         height: 60px;
         width: 100%;
-    }  
-    & .producto{
-        height: 240px;
+    }
+
+    & .producto {
+        height: 300px;
         width: 100%;
-        background-color: blue;
-    } 
-    & .desc_prod{
+        background-color: rgb(107, 107, 114);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        & span {
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+        }
+
+        & .imagen {
+            height: 100px auto;
+            overflow: hidden;
+            width: 100%;
+
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        & .imagen:hover{
+            height: 300px;
+            width: 300px;
+            overflow: visible;
+            box-shadow: 0 0 50px 1500px black;
+            z-index: 300;
+          
+        }
+    }
+
+    & .desc_prod {
         height: 200px;
         width: 100%;
         background-color: rgb(85, 85, 173);
-    } 
-    & .botonera{
+    }
+
+    & .botonera {
         height: 50px;
         width: 100%;
-        background-color: blue;
-    } 
+        background-color: rgb(60, 60, 78);
+        display: flex;
+        justify-content: center;
 
-   
-   
+        & button {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-radius: 20px;
+            height: 40px;
+            padding: 5px 40px;
+        }
+    }
+
+
+
+}
+
+.colores {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    gap: 5px;
+
+
+    & li {
+        list-style: none;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        transition: all 0.2s ease-in-out;
+    }
+
+    & li:hover {
+        transform: scale(1.3);
+        cursor: pointer;
+    }
+
+    & li:nth-child(1) {
+        background-color: yellow;
+    }
+
+    & li:nth-child(2) {
+        background-color: rgb(255, 255, 255);
+    }
+
+    & li:nth-child(3) {
+        background-color: rgb(180, 29, 160);
+    }
+
+    & li:nth-child(4) {
+        background-color: rgb(5, 51, 53);
+    }
+
+}
+
+
+.colores li:hover,
+.talles li:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+.talles {
+    width: 60%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+
+    & li {
+        list-style: none;
+        border: solid 1px rgb(255, 255, 255);
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.8em;
+        font-weight: bolder;
+        color: white;
+    }
 }
 
 
 
 
 /*BOX-SHADOW : X Y BLUR Z COLOR         SOMBRA EXTERIOR*/
-    /*BOX-SHADOW : INSET X Y BLUR Z COLOR   SOMBRA INTERIOR*/
+/*BOX-SHADOW : INSET X Y BLUR Z COLOR   SOMBRA INTERIOR*/
